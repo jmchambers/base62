@@ -88,7 +88,7 @@ class Integer
      result = ''
      while(number != 0)
         result = BASE62_PRIMITIVES[number % BASE62_PRIMITIVES.size ].to_s + result
-        number /= BASE62_PRIMITIVES.size
+        number = Integer(number / BASE62_PRIMITIVES.size)
      end
     result
   end
